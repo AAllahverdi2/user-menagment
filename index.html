@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+
+        .searchInp {
+            background-color: #212529;
+            color: white !important;
+            width: 300px;
+            height: 40px;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User Management System</h1>
+    <input type="text" oninput="handleSearch()" id="search" class="searchInp" placeholder="Search by name ">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Job</th>
+                <th>Company</th>
+                <th>Birthdate</th>
+                <th>Age</th>
+                <th>Retired</th>
+            </tr>
+        </thead>
+        <tbody id="user-table">
+        </tbody>
+    </table>
+     <div class="pagination">
+        <button id="prev-page">Previous</button>
+        <button id="next-page">Next</button>
+    </div> 
+
+    <script src="main.js"></script>
+</body>
+
+</html>
